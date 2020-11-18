@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Row = ({ left, right }) => {
     return (
@@ -13,4 +14,22 @@ const Row = ({ left, right }) => {
     );
 };
 
+
+Row.propTypes = {
+    left: PropTypes.node,
+    right: PropTypes.node
+};
+
 export default Row;
+
+// PropTypes.node -> react component, object , string, ....
+// PropTypes.element -> only react component
+
+// View.propTypes = {
+//     user: PropTypes.shape({
+//         name: PropTypes.string,
+//         role: PropTypes.oneOf(['USER', 'ADMIN'])
+//     })
+// };
+
+// powerful lib -> airbnb/propTypes
